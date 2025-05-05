@@ -1,12 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wfrankn Live Streams</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animate on Scroll CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* Simple pulse animation for the LIVE badges */
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
 </head>
-<body>
-    <h1>Welcome to the Test Page</h1>
-    <p>If you see this, your GitHub Pages deployment is working correctly!</p>
+
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-gray-100 font-sans min-h-screen flex flex-col">
+
+  <!-- Header --->
+  <header class="bg-black py-8 shadow-lg">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-5xl font-extrabold text-pink-500 drop-shadow-md">Welcome to wfrankn's Streams</h1>
+      <p class="mt-4 text-xl text-gray-300">Catch me live on Twitch, TikTok, and YouTube! 🔥</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="py-12 flex-grow">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+        <!-- Twitch Embed -->
+        <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-all duration-300" data-aos="fade-up">
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="text-2xl font-bold text-purple-400">Twitch Stream</h2>
+              <span class="bg-red-600 text-white text-sm font-bold py-1 px-3 rounded-full pulse">LIVE</span>
+            </div>
+            <div class="aspect-w-16 aspect-h-9">
+              <iframe
+                src="https://player.twitch.tv/?channel=snapzoom&parent=wfrankn-content.github.io&parent=github.io&muted=true&autoplay=true"
+                frameborder="0"
+                allowfullscreen="true"
+                scrolling="no"
+                class="w-full h-full rounded-lg">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- TikTok Live Link -->
+        <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="p-6">
+            <div class="flex items-center justify-center gap-2 mb-4">
+              <h2 class="text-2xl font-bold text-pink-400">TikTok Live</h2>
+              <span class="bg-red-600 text-white text-sm font-bold py-1 px-3 rounded-full pulse">LIVE</span>
+            </div>
+            <div class="w-full h-64 bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 mb-6">
+              <span>TikTok Live Preview</span>
+            </div>
+            <a href="https://www.tiktok.com/@wfrankn/live" 
+               target="_blank"
+               class="inline-block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-full text-xl shadow-lg transition-all duration-300">
+              Watch on TikTok
+            </a>
+          </div>
+        </div>
+
+        <!-- YouTube Live Embed -->
+        <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="text-2xl font-bold text-red-500">YouTube Live</h2>
+              <span class="bg-red-600 text-white text-sm font-bold py-1 px-3 rounded-full pulse">LIVE</span>
+            </div>
+            <div class="aspect-w-16 aspect-h-9">
+              <iframe
+                src="https://player.twitch.tv/?channel=snapzoom&parent=wfrankn-content.github.io&parent=github.io&muted=true&autoplay=true"
+                frameborder="0"
+                allow="autoplay; encrypted-media" 
+                allowfullscreen
+                class="w-full h-full rounded-lg">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black py-6">
+    <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+      &copy; 2025 wfrankn. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- AOS Animate on Scroll Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // how long animations run
+      once: true, // only animate once when scrolling down
+    });
+  </script>
+
 </body>
 </html>
